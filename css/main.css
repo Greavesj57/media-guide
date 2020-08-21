@@ -1,45 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-* {
-  font-family: Montserrat, "Segoe UI", sans-serif;
-  Background: #2e2e2e;
-  color: white;
-}
-
-body {
+body html {
   margin: 0px;
-}
-
-div {
-  padding: 10px;
-}
-
-#header > a {
-  margin-right: 15px;
-  background-color: white;
-  color: #2e2e2e;
-  text-decoration: none;
-  padding: 3px 8px;
-  font-weight: bold;
-  border-radius: 20px;
-}
-
-#header > a:hover {
-  color: white;
-  background-color: #17192b;
-  border: 1px solid white;
-}
-
-h2 {
-  margin-top: 20px;
-}
-
-#header {
-  border-bottom: 1px solid white;
-  width: 100%;
+  padding: 0px;
 }
 
 input {
-  display: inline-block;
-  margin-right: 10px;
+  margin: 0px 10px;
+}
+
+li:nth-child(even) {
+  background-color: lightgrey;
+}
+
+#title {
+  font-weight: strong;
+  font-size: 1.5em;
+}
+
+.time {
+  font-size: 1.3em;
+  font-weight: bolder;
+  background-color: lightgreen;
+  width: 200px;
+  border-radius: 10px;
+  float: right;
+  Color: black;
+  margin-top: 5px;
 }
 /*# sourceMappingURL=main.css.map */

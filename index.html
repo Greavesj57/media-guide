@@ -1,125 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=">
     <title>SCBC Media Ops</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+  <script src="js/time.js"></script>
 </head>
 	
-<body>
+<body onload=startTime();>
 	
-<div id="header">
-	<h1>Southern Calvert Baptist Church Media Operations Guide</h1>
-	<a href="#1">Streaming Setup</a>
-	<a href="#2">Wirecast Setup</a>
-	<a href="3">Sharing Video</a>
-	<a href="#4">Wirecast Audio Setup</a>
-	<a href="#5">Countdown Start</a>
-	<a href="#6">Best Practices</a>
-</div>
+
+<style>
+
+    body html {
+        margin:0px;
+        padding:0px;
+    }
+    input {
+        margin:0px 10px;
+    }
+li:nth-child(even) {
+        background-color:lightgrey;
+    }
+
+    #title {
+        font-weight:strong;
+        font-size:1.5em;
+    }
+
+    .time {
+        font-size:1.3em;
+        font-weight:bolder;
+        background-color:lightgreen;
+        width: 200px;
+        border-radius:10px;
+        float:right;
+        Color:black;
+        margin-top:5px;
+    }
+ 
+</style>
+
+<body >
+    <nav class="sticky-top navbar-dark bg-dark text-light">
+      <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <a class="navbar-brand p-2" href="#"><img style="height:50px;" src="img/scbclogosq.png" alt="scbc logo"></a>
+                    <span id="title">SCBC Media Guide</span>
+                    <span class="container-fluid time">
+                        <span>Time: </span>
+                        <span id='time'></span>
+                    </span>
+                </div>
+            </div>
+      </div>
+      
+    </nav>
+    <div class="container-fluid ">
+        <div class="alert alert-info my-3" role="alert">
+            Checkboxes are not persistent. If you close this window and re-open it the checks will have to be re-checked.
+          </div>
+    </div>
 
 
-<div id="main">
-	
-	<div id="streamingSetup">
-
-		<h2>Streaming Setup/Config</h2>
-		<ol>
-			<li><input type="checkbox" id="ss1">Check PC network setting & ensure online with Ethernet, not WiFi connection </li>
-			<li><input type="checkbox" id="ss2">Open Chrome browser & select YouTube.com </li>
-			<li><input type="checkbox" id="ss3">Select SCBC icon/channel on upper right </li>
-			<li><input type="checkbox" id="ss4">Select Create Video -> Go Live </li>
-			<li><input type="checkbox" id="ss5">Select most recent Sunday livestream with 1080p encoding and Click “Reuse Settings” </li>
-			<li><input type="checkbox" id="ss6">Change Sermon title on first line &
-												Ensure description is “Sunday Morning Worship Livestream” </li>
-			<li><input type="checkbox" id="ss7">Set date/time (10:25) for start of countdown</li>
-			<li><input type="checkbox" id="ss8">Check thumbnail to ensure high-resolution</li>
-			<li><input type="checkbox" id="ss9">Select “Create"</li>
-			<li><input type="checkbox" id="ss10">Scroll down settings to ensure proper encoding and “Low Latency” selected </li>
-		</ol>
-
-	</div>
-
-
-	<div id="wirecastSetup">
-		<h2 id="2">Wirecast Setup</h2>
-		<ol>
-			<li><input type="checkbox" id="ws1">close untitled window</li>
-			<li><input type="checkbox" id="ws2">Open Wirecast, select File->Open_>”Default_SCBC – Sunday”</li>
-			<li><input type="checkbox" id="ws3">Select the layer “Decklink mini rec” </li>
-			<li><input type="checkbox" id="ws4">Expand left flyout if necessary, and click System Device Properties Ensure audio delay to “0.00” sec. (May adjust later 0.1 – 0.25) </li>
-			<li><input type="checkbox" id="ws5">Select Output Menu & Output Settings 
-			<li><input type="checkbox" id="ws6">Select the Record to Disc output </li>
-			<li><input type="checkbox" id="ws7">Change name and file to current date </li>
-			<li><input type="checkbox" id="ws8">Ensure Intel Quicksync 1080p30 encoding is selected </li>
-			<li><input type="checkbox" id="ws9">Select the YouTube output </li>
-			<li><input type="checkbox" id="ws10">Change date in name</li>
-			<li><input type="checkbox" id="ws11">Ensure Intel Quicksync 1080p30 encoding is selected</li>
-			<li><input type="checkbox" id="ws12">Select “upcoming event” and the scheduled stream previously created </li>
-			<li><input type="checkbox" id="ws13">Select the Facebook output</li>
-			<li><input type="checkbox" id="ws14">Ensure Intel Quicksync 1080p30 encoding is selected </li>
-			<li><input type="checkbox" id="ws15">Enter the sermon title and date</li>
-			<li><input type="checkbox" id="ws16">Select “Create” to save the entered values </li>
-			<li><input type="checkbox" id="ws17">Select “Optimize Connection” (May repeat or delay until 10:20)</li>
-			<li><input type="checkbox" id="ws18">Save Output Settings</li>
-		
-		</ol>
-	</div>
+    <div class="container-fluid">
+        <div class="accordion mt-2" id="mediaGuide">
+           
+           
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#streamingSetup" aria-expanded="true" aria-controls="collapseOne">
+                    <h4 class="m-0">Streaming Setup</h4>
+                  </button>
+                </h2>
+              </div>
+              <div id="streamingSetup" class="collapse show" aria-labelledby="headingOne" data-parent="#mediaGuide">
+                <div class="card-body">
+                    <ol>
+                        <li><input type="checkbox" id="ss1">Check PC network setting & ensure online with Ethernet, not WiFi connection </li>
+                        <li><input type="checkbox" id="ss2">Open Chrome browser & select YouTube.com </li>
+                        <li><input type="checkbox" id="ss3">Select SCBC icon/channel on upper right </li>
+                        <li><input type="checkbox" id="ss4">Select Create Video -> Go Live </li>
+                        <li><input type="checkbox" id="ss5">Select most recent Sunday livestream with 1080p encoding and Click “Reuse Settings” </li>
+                        <li><input type="checkbox" id="ss6">Change Sermon title on first line &
+                                                            Ensure description is “Sunday Morning Worship Livestream” </li>
+                        <li><input type="checkbox" id="ss7">Set date/time (10:25) for start of countdown</li>
+                        <li><input type="checkbox" id="ss8">Check thumbnail to ensure high-resolution</li>
+                        <li><input type="checkbox" id="ss9">Select “Create"</li>
+                        <li><input type="checkbox" id="ss10">Scroll down settings to ensure proper encoding and “Low Latency” selected </li>
+                    </ol>
+                </div>
+              </div>
+            </div>
 
 
-<h2 id="3">Sharing Video</h2>
-<ol>
-	<li>In Chrome browser, select the “Share” option on the upper right in YouTube</li>
-	<li>Copy the YouTube link from the “Share” dialog</li>
-	<li>Copy Link to SCBC Public Facebook Page</li>
-	<li>Copy Link to SCBC Private Group</li>
-	<li>Alternately the livestream can always be accessed at: <a href="www.youtube.com/c/southerncalvertbaptistchurch/live">www.youtube.com/c/southerncalvertbaptistchurch/live</a></li>
-</ol>
 
-<h2 id="4">Wirecast Audio Setup</h2>
-		<ol>
-			<li>In Wirecast, select Window->Audio Mixer</li>
-			<li>On output side of window, select Settings (gear icon) by Noise Reduction Ensure Noise Reduction set to “0” for band, then adjust to ~ 25% for sermon </li>
-			<li>Prior to countdown, check size and positioning of sermon lower-thirds. Typically sized up a couple of notches & shifted down slightly </li>
-		</ol>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#wirecastSetup" aria-expanded="false" aria-controls="collapseTwo">
+                    <h4 class="m-0">Wirecast Setup</h4>
+                  </button>
+                </h2>
+              </div>
+              <div id="wirecastSetup" class="collapse" aria-labelledby="headingTwo" data-parent="#mediaGuide">
+                <div class="card-body">
+                    <ol>
+                        <li><input type="checkbox" id="ws1">Close untitled window</li>
+                        <li><input type="checkbox" id="ws2">Open Wirecast, select File->Open_>”Default_SCBC – Sunday”</li>
+                        <li><input type="checkbox" id="ws3">Select the layer “Decklink mini rec” </li>
+                        <li><input type="checkbox" id="ws4">Expand left flyout if necessary, and click System Device Properties Ensure audio delay to “0.00” sec. (May adjust later 0.1 – 0.25) </li>
+                        <li><input type="checkbox" id="ws5">Select Output Menu & Output Settings 
+                        <li><input type="checkbox" id="ws6">Select the Record to Disc output </li>
+                        <li><input type="checkbox" id="ws7">Change name and file to current date </li>
+                        <li><input type="checkbox" id="ws8">Ensure Intel Quicksync 1080p30 encoding is selected </li>
+                        <li><input type="checkbox" id="ws9">Select the YouTube output </li>
+                        <li><input type="checkbox" id="ws10">Change date in name</li>
+                        <li><input type="checkbox" id="ws11">Ensure Intel Quicksync 1080p30 encoding is selected</li>
+                        <li><input type="checkbox" id="ws12">Select “upcoming event” and the scheduled stream previously created </li>
+                        <li><input type="checkbox" id="ws13">Select the Facebook output</li>
+                        <li><input type="checkbox" id="ws14">Ensure Intel Quicksync 1080p30 encoding is selected </li>
+                        <li><input type="checkbox" id="ws15">Enter the sermon title and date</li>
+                        <li><input type="checkbox" id="ws16">Select “Create” to save the entered values </li>
+                        <li><input type="checkbox" id="ws17">Select “Optimize Connection” (May repeat or delay until 10:20)</li>
+                        <li><input type="checkbox" id="ws18">Save Output Settings</li>
+                    
+                    </ol>
+              </div>
+            </div>
 
-<h2 id="5">Countdown Start</h2>
-<ol>
-	<li>Ensure keying off on video mixer, and channel 5 is selected output PGM</li>
-	<li>Ensure computer volume is on at proper level in mix 7/8</li>
-	<li>In Wirecast, start recording and streaming</li>
-	<li>n YouTube ensure stream is received and select “Go Live”</li>
-	<li>On another device (not streaming PC, and not using wifi)
-Monitor audio levels and mix.
-	<ul>
-		<li>Matrix 1-2 fed to video room (Ipad custom 2) </li>
-		<li>Mix 5-6 for band (Ipad custom 3)</li>
-		<li>Mix 7-8 for Speaking/house/computer (Ipad custom 1) </li>
-	</ul>
-	<li>Check Facebook stream to ensure up & running</li>
-	<li>Check both FB & YouTube streams for audio latency 
-		<em>(Adjusting latency will affect all outputs, so only change if both streams are offline)</em>
-	</li>
-</ol>
-<h2 id="6">Best Practices</h2>
-<ul>
-	<li>Practice dynamic use of manual camera PTZ so it can be done smoothly.Prefer dynamic use of cameras during worship set </li>
-	<li>Make notes during practice of key shots to use at beginning/end of songs & transitions to pulpit for announcements, prayer, sermon & closing. Recommend camera 1 as pastor approaches pulpit & band clears stage, 
-Be prepared to quickly switch to camera 2, scene 1 before titles show </li>
-	<li>Try not to change camera shot during prayer or scripture reading </li>
-	<li>Try to avoid congregational views during health emergency restrictions </li>
-	<li>Try to avoid band chatter & motion during prayer/scripture reading </li>
-	<li>Try to keep pastor centered in shot (center third for cameras 1 & 3) </li>
-	<li>Try to keep same margin above pastor’s head on all camera angles, noting there is less margin at top of frame in Wirecast </li>
-	<li>With experience, can turn keying off between points to use camera fades vs. cuts.Follow sermon outline to be aware of when points will be displayed (keying on) </li>
-	<li>Monitor uplink quality & if it turns red, check upload speed at: www.testmy.net/upload </li>
-	<li>If poor upload speed & dropped streams confirmed, capture screen/notes to pass along to Comcast </li>
-</ul>
-</div>
+           
 
-		
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#sharingVideo" aria-expanded="false" aria-controls="collapseThree">
+                    <h4 class="my-0">Sharing Video</h4>
+                  </button>
+                </h2>
+              </div>
+              <div id="sharingVideo" class="collapse" aria-labelledby="headingThree" data-parent="#mediaGuide">
+                <div class="card-body">
+                  <ol>
+                    <li> <input type="checkbox" id="sv1">In Chrome browser, select the “Share” option on the upper right in YouTube</li>
+                    <li> <input type="checkbox" id="sv2">Copy the YouTube link from the “Share” dialog</li>
+                    <li> <input type="checkbox" id="sv3">Copy Link to SCBC Public Facebook Page</li>
+                    <li> <input type="checkbox" id="sv4">Copy Link to SCBC Private Group</li>
+                    <li> <input type="checkbox" id="sv5">Alternately the livestream can always be accessed at: <a href="www.youtube.com/c/southerncalvertbaptistchurch/live">www.youtube.com/c/southerncalvertbaptistchurch/live</a></li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            
 
-	
+
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h2 class="mb-0">
+                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#wirecastAudio" aria-expanded="false" aria-controls="collapseFour">
+                      <h4 class="my-0">Wirecast Audio Setup</h4>
+                    </button>
+                  </h2>
+                </div>
+                <div id="wirecastAudio" class="collapse" aria-labelledby="headingFour" data-parent="#mediaGuide">
+                  <div class="card-body">
+                    <ol>
+                        <li><input type="checkbox" id="wca1">In Wirecast, select Window->Audio Mixer</li>
+                        <li><input type="checkbox" id="wca2">On output side of window, select Settings (gear icon) by Noise Reduction Ensure Noise Reduction set to “0” for band, then adjust to ~ 25% for sermon </li>
+                        <li><input type="checkbox" id="wca3">Prior to countdown, check size and positioning of sermon lower-thirds. Typically sized up a couple of notches & shifted down slightly </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+             
+
+              <div class="card">
+                <div class="card-header" id="headingFive">
+                  <h2 class="mb-0">
+                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#countdown" aria-expanded="false" aria-controls="collapseFive">
+                      <h4 class="my-0">Countdown Start (10:25)</h4>
+                    </button>
+                  </h2>
+                </div>
+                <div id="countdown" class="collapse" aria-labelledby="headingFive" data-parent="#mediaGuide">
+                  <div class="card-body">
+                    <ol>
+                        <li> <input type="checkbox" id="cd1">Ensure keying off on video mixer, and channel 5 is selected output PGM</li>
+                        <li> <input type="checkbox" id="cd2">Ensure computer volume is on at proper level in mix 7/8</li>
+                        <li> <input type="checkbox" id="cd3">In Wirecast, start recording and streaming</li>
+                        <li> <input type="checkbox" id="cd4">In YouTube ensure stream is received and select “Go Live”</li>
+                        <li> <input type="checkbox" id="cd5">On another device (not streaming PC, and not using wifi)
+                    Monitor audio levels and mix.
+                        <ul>
+                            <li> <input type="checkbox" id="cd6">Matrix 1-2 fed to video room (Ipad custom 2) </li>
+                            <li> <input type="checkbox" id="cd7">Mix 5-6 for band (Ipad custom 3)</li>
+                            <li> <input type="checkbox" id="cd8">Mix 7-8 for Speaking/house/computer (Ipad custom 1) </li>
+                        </ul>
+                        <li> <input type="checkbox" id="cd9">Check Facebook stream to ensure up & running</li>
+                        <li> <input type="checkbox" id="cd10">Check both FB & YouTube streams for audio latency 
+                            <em>(Adjusting latency will affect all outputs, so only change if both streams are offline)</em>
+                        </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingSix">
+                  <h2 class="mb-0">
+                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#bestPractices" aria-expanded="false" aria-controls="collapseSix">
+                      <h4 class="my-0">Best Practices</h4>
+                    </button>
+                  </h2>
+                </div>
+                <div id="bestPractices" class="collapse" aria-labelledby="headingSix" data-parent="#mediaGuide">
+                  <div class="card-body">
+                    <ul>
+                        <li>Practice dynamic use of manual camera PTZ so it can be done smoothly.Prefer dynamic use of cameras during worship set </li>
+                        <li>Make notes during practice of key shots to use at beginning/end of songs & transitions to pulpit for announcements, prayer, sermon & closing. Recommend camera 1 as pastor approaches pulpit & band clears stage, 
+                    Be prepared to quickly switch to camera 2, scene 1 before titles show </li>
+                        <li>Try not to change camera shot during prayer or scripture reading </li>
+                        <li>Try to avoid congregational views during health emergency restrictions </li>
+                        <li>Try to avoid band chatter & motion during prayer/scripture reading </li>
+                        <li>Try to keep pastor centered in shot (center third for cameras 1 & 3) </li>
+                        <li>Try to keep same margin above pastor’s head on all camera angles, noting there is less margin at top of frame in Wirecast </li>
+                        <li>With experience, can turn keying off between points to use camera fades vs. cuts.Follow sermon outline to be aware of when points will be displayed (keying on) </li>
+                        <li>Monitor uplink quality & if it turns red, check upload speed at: www.testmy.net/upload </li>
+                        <li>If poor upload speed & dropped streams confirmed, capture screen/notes to pass along to Comcast </li>
+                    </ul>
+         
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+          </div>
+    </div>
+
+      <script src="js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
