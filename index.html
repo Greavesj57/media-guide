@@ -4,63 +4,70 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=">
     <title>SCBC Media Ops</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 	
 <body>
 	
-	<div id="header">
+<div id="header">
 	<h1>Southern Calvert Baptist Church Media Operations Guide</h1>
-
-<a href="#1">Streaming Setup</a>
-<a href="#2">Wirecast Setup</a>
-<a href="3">Sharing Video</a>
-<a href="#4">Wirecast Audio Setup</a>
-<a href="#5">Countdown Start</a>
-<a href="#6">Best Practices</a>
+	<a href="#1">Streaming Setup</a>
+	<a href="#2">Wirecast Setup</a>
+	<a href="3">Sharing Video</a>
+	<a href="#4">Wirecast Audio Setup</a>
+	<a href="#5">Countdown Start</a>
+	<a href="#6">Best Practices</a>
 </div>
 
 
 <div id="main">
 	
-<h2 id="1">Streaming Setup/Config</h2>
-<ol>
-	<li>Check PC network setting & ensure online with Ethernet, not WiFi connection </li>
-	<li>Open Chrome browser & select YouTube.com </li>
-	<li>Select SCBC icon/channel on upper right </li>
-	<li>Select Create Video -> Go Live </li>
-	<li>Select most recent Sunday livestream with 1080p encoding and Click “Reuse Settings” </li>
-	<li>Change Sermon title on first line &
-Ensure description is “Sunday Morning Worship Livestream” </li>
-	<li>Set date/time (10:25) for start of countdown</li>
-	<li>Check thumbnail to ensure high-resolution</li>
-	<li>Select “Create"</li>
-	<li>Scroll down settings to ensure proper encoding and “Low Latency” selected </li>
-</ol>
+	<div id="streamingSetup">
 
-<h2 id="2">Wirecast Setup</h2>
-<ol>
-	<li>Open Wirecast, select File->Open_>”Default_SCBC – Sunday”</li>
-	<li>close untitled window</li>
-	<li>Select the layer “Decklink mini rec” </li>
-	<li>Expand left flyout if necessary, and click System Device Properties Ensure audio delay to “0.00” sec. (May adjust later 0.1 – 0.25) </li>
-	<li>Select Output Menu & Output Settings 
-	<li>Select the Record to Disc output </li>
-	</li>
-	<li>Change name and file to current date </li>
-	<li>Ensure Intel Quicksync 1080p30 encoding is selected </li>
-	<li>Select the YouTube output </li>
-	<li>Change date in name</li>
-	<li>Ensure Intel Quicksync 1080p30 encoding is selected</li>
-<li>Select “upcoming event” and the scheduled stream previously created </li>
-<li>Select the Facebook output</li>
-<li>Ensure Intel Quicksync 1080p30 encoding is selected </li>
-<li>Enter the sermon title and date</li>
-<li>Select “Create” to save the entered values </li>
-<li>Select “Optimize Connection” (May repeat or delay until 10:20)</li>
-<li>Save Output Settings</li>
+		<h2>Streaming Setup/Config</h2>
+		<ol>
+			<li><input type="checkbox" id="ss1">Check PC network setting & ensure online with Ethernet, not WiFi connection </li>
+			<li><input type="checkbox" id="ss2">Open Chrome browser & select YouTube.com </li>
+			<li><input type="checkbox" id="ss3">Select SCBC icon/channel on upper right </li>
+			<li><input type="checkbox" id="ss4">Select Create Video -> Go Live </li>
+			<li><input type="checkbox" id="ss5">Select most recent Sunday livestream with 1080p encoding and Click “Reuse Settings” </li>
+			<li><input type="checkbox" id="ss6">Change Sermon title on first line &
+												Ensure description is “Sunday Morning Worship Livestream” </li>
+			<li><input type="checkbox" id="ss7">Set date/time (10:25) for start of countdown</li>
+			<li><input type="checkbox" id="ss8">Check thumbnail to ensure high-resolution</li>
+			<li><input type="checkbox" id="ss9">Select “Create"</li>
+			<li><input type="checkbox" id="ss10">Scroll down settings to ensure proper encoding and “Low Latency” selected </li>
+		</ol>
 
-</ol>
+	</div>
+
+
+	<div id="wirecastSetup">
+		<h2 id="2">Wirecast Setup</h2>
+		<ol>
+			<li><input type="checkbox" id="ws1">close untitled window</li>
+			<li><input type="checkbox" id="ws2">Open Wirecast, select File->Open_>”Default_SCBC – Sunday”</li>
+			<li><input type="checkbox" id="ws3">Select the layer “Decklink mini rec” </li>
+			<li><input type="checkbox" id="ws4">Expand left flyout if necessary, and click System Device Properties Ensure audio delay to “0.00” sec. (May adjust later 0.1 – 0.25) </li>
+			<li><input type="checkbox" id="ws5">Select Output Menu & Output Settings 
+			<li><input type="checkbox" id="ws6">Select the Record to Disc output </li>
+			<li><input type="checkbox" id="ws7">Change name and file to current date </li>
+			<li><input type="checkbox" id="ws8">Ensure Intel Quicksync 1080p30 encoding is selected </li>
+			<li><input type="checkbox" id="ws9">Select the YouTube output </li>
+			<li><input type="checkbox" id="ws10">Change date in name</li>
+			<li><input type="checkbox" id="ws11">Ensure Intel Quicksync 1080p30 encoding is selected</li>
+			<li><input type="checkbox" id="ws12">Select “upcoming event” and the scheduled stream previously created </li>
+			<li><input type="checkbox" id="ws13">Select the Facebook output</li>
+			<li><input type="checkbox" id="ws14">Ensure Intel Quicksync 1080p30 encoding is selected </li>
+			<li><input type="checkbox" id="ws15">Enter the sermon title and date</li>
+			<li><input type="checkbox" id="ws16">Select “Create” to save the entered values </li>
+			<li><input type="checkbox" id="ws17">Select “Optimize Connection” (May repeat or delay until 10:20)</li>
+			<li><input type="checkbox" id="ws18">Save Output Settings</li>
+		
+		</ol>
+	</div>
+
+
 <h2 id="3">Sharing Video</h2>
 <ol>
 	<li>In Chrome browser, select the “Share” option on the upper right in YouTube</li>

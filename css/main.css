@@ -35,11 +35,11 @@ h2 {
 
 #header {
   border-bottom: 1px solid white;
-  position: fixed;
   width: 100%;
 }
 
-#main {
-  padding-top: 120px;
+input {
+  display: inline-block;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=main.css.map */
