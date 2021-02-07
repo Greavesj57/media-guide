@@ -48,17 +48,20 @@
               <div id="streamingSetup" class="collapse show" aria-labelledby="headingOne" data-parent="#mediaGuide">
                 <div class="card-body">
                     <ol>
-                        <li><input type="checkbox" id="ss1">Check PC network setting & ensure online with Ethernet, not WiFi connection </li>
-                        <li><input type="checkbox" id="ss2">Open Chrome browser & select YouTube.com </li>
-                        <li><input type="checkbox" id="ss3">Select SCBC icon/channel on upper right </li>
-                        <li><input type="checkbox" id="ss4">Select Create Video -> Go Live </li>
-                        <li><input type="checkbox" id="ss5">Select most recent Sunday livestream with 1080p encoding and Click “Reuse Settings” </li>
-                        <li><input type="checkbox" id="ss6">Change Sermon title on first line &
-                                                            Ensure description is “Sunday Morning Worship Livestream” </li>
+                    
+                        <li><input type="checkbox" id="ss1">Open Chrome browser & select YouTube.com (Should be on one of the Open Tabs)</li>
+                        <li><input type="checkbox" id="ss2">Select SCBC icon/channel on upper right </li>
+                        <li><input type="checkbox" id="ss3">Select Create Video -> Go Live (Opens Youtube Studio) </li>
+                        <li><input type="checkbox" id="ss4">On left, select Manage -> Schedule Stream </li> 
+                        <li><input type="checkbox" id="ss5">Select most recent Sunday livestream (of same type; Sunday/Bible study and click "Reuse Settings"</li>
+                        <li><input type="checkbox" id="ss6">Replace Sermon/Study title on first line & ensure description and/or bible reference is correct (i.e. "Sunday Morning Worship Livestream")</li>
                         <li><input type="checkbox" id="ss7">Set date/time (10:25) for start of countdown</li>
                         <li><input type="checkbox" id="ss8">Check thumbnail to ensure high-resolution</li>
                         <li><input type="checkbox" id="ss9">Select “Create"</li>
                         <li><input type="checkbox" id="ss10">Scroll down settings to ensure proper encoding and “Low Latency” selected </li>
+                        <li><input type="checkbox" id="ss11">Enable  Auto Start & Stop </li>
+                        <li><input type="checkbox" id="ss12">Ensure stream key = 1080P</li>
+                        
                     </ol>
                 </div>
               </div>
@@ -74,24 +77,29 @@
               <div id="wirecastSetup" class="collapse" aria-labelledby="headingTwo" data-parent="#mediaGuide">
                 <div class="card-body">
                     <ol>
-                        <li><input type="checkbox" id="ws1">Close untitled window</li>
-                        <li><input type="checkbox" id="ws2">Open Wirecast, select File->Open_>”Default_SCBC – Sunday”</li>
+                       
+                        <li><input type="checkbox" id="ws2">Open Wirecast, ensure appropriate document used for Sunday/Bible Study; - Sunday: select File -> Open -> "Default_SCBC_Sunday" close other window.</li>
                         <li><input type="checkbox" id="ws3">Select the layer “Decklink mini rec” </li>
                         <li><input type="checkbox" id="ws4">Expand left flyout if necessary, and click System Device Properties Ensure audio delay to “0.00” sec. (May adjust later 0.1 – 0.25) </li>
-                        <li><input type="checkbox" id="ws5">Select Output Menu & Output Settings 
-                        <li><input type="checkbox" id="ws6">Select the Record to Disc output </li>
-                        <li><input type="checkbox" id="ws7">Change name and file to current date </li>
-                        <li><input type="checkbox" id="ws8">Ensure Intel Quicksync 1080p30 encoding is selected </li>
-                        <li><input type="checkbox" id="ws9">Select the YouTube output </li>
-                        <li><input type="checkbox" id="ws10">Change date in name</li>
-                        <li><input type="checkbox" id="ws11">Ensure Intel Quicksync 1080p30 encoding is selected</li>
-                        <li><input type="checkbox" id="ws12">Select “upcoming event” and the scheduled stream previously created </li>
-                        <li><input type="checkbox" id="ws13">Select the Facebook output</li>
-                        <li><input type="checkbox" id="ws14">Ensure Intel Quicksync 1080p30 encoding is selected </li>
-                        <li><input type="checkbox" id="ws15">Enter the sermon title and date</li>
-                        <li><input type="checkbox" id="ws16">Select “Create” to save the entered values </li>
-                        <li><input type="checkbox" id="ws17">Select “Optimize Connection” (May repeat or delay until 10:20)</li>
-                        <li><input type="checkbox" id="ws18">Save Output Settings</li>
+                        <li><input type="checkbox" id="ws5">Select Output Menu & Output Settings</li> 
+
+
+
+                        <li><input type="checkbox" id="ws6"><strong>Select the Record to Disc output.</strong> </li>
+                        <li><input type="checkbox" id="ws7">Change name and file to current date. </li>
+                        <li><input type="checkbox" id="ws8">Ensure Intel Quicksync 1080p30 encoding is selected. </li>
+
+                        <li><input type="checkbox" id="ws9"><strong>Select the YouTube output</strong></li>
+                        <li><input type="checkbox" id="ws11">Ensure Intel Quicksync 1080p30 encoding is selected.</li>
+                        <li><input type="checkbox" id="ws12">Select eventand the scheduled stream previously created. </li>
+
+                        <li><input type="checkbox" id="ws13"><strong>Select the Facebook output.</strong></li>
+                        <li><input type="checkbox" id="ws14">Ensure Intel Quicksync 1080p30 encoding is selected. </li>
+                        <li><input type="checkbox" id="ws15">Select Schedule for later vs. Go Live Now.</li>
+                        <li><input type="checkbox" id="ws16">Replace as appropriate the sermon title, date and pastor.</li>
+                        <li><input type="checkbox" id="ws16">Select "Schedule on Facebook" to save entered values.</li>
+                        <li><input type="checkbox" id="ws17">Select “Optimize Connection” (May repeat or delay until 10:20).</li>
+                        <li><input type="checkbox" id="ws18">Save Output Settings.</li>
                     
                     </ol>
               </div>
@@ -205,3 +213,4 @@
       <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
